@@ -20,7 +20,7 @@ use Survos\BabelBundle\Attribute\Translatable;
 #[BabelStorage(StorageMode::Property)]
 class Article implements TranslatableResolvedInterface
 {
-    use TranslatableHooksTrait, Translations\ArticleTranslationsTrait;
+    use TranslatableHooksTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -37,6 +37,10 @@ class Article implements TranslatableResolvedInterface
     /**
      * @var Collection<int, Tag>
      */
+
+    #[Translatable()]
+    #[ORM\Column(length: 255)]
+    public ?string $title = null;
 
     #[Translatable()]
     #[ORM\Column(type: Types::TEXT, length: 255)]
