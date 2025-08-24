@@ -38,6 +38,7 @@ class Article implements TranslatableResolvedInterface
      * @var Collection<int, Tag>
      */
 
+    #[Translatable()]
     #[ORM\Column(type: Types::TEXT, length: 255)]
     public $content = null;
     #[ORM\ManyToMany(targetEntity: Tag::class, mappedBy: 'articles')]
