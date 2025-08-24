@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "119d1bbe57e3a6b58fc6a9a8187bbbf3",
+    "content-hash": "7ba64478f6bfe98043cbc02e1deacbdf",
     "packages": [
         {
             "name": "composer/semver",
@@ -1128,16 +1128,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "45004aca79189474f113cbe3a53847c2115a55fa"
+                "reference": "dcbdfe4b211ae09478e192289cae7ab0987b29a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/45004aca79189474f113cbe3a53847c2115a55fa",
-                "reference": "45004aca79189474f113cbe3a53847c2115a55fa",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/dcbdfe4b211ae09478e192289cae7ab0987b29a4",
+                "reference": "dcbdfe4b211ae09478e192289cae7ab0987b29a4",
                 "shasum": ""
             },
             "require": {
@@ -1145,16 +1145,14 @@
                 "php": "^8.1",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0"
             },
-            "conflict": {
-                "doctrine/common": "<2.10"
-            },
             "require-dev": {
                 "doctrine/coding-standard": "^12",
                 "phpstan/phpstan": "1.12.7",
                 "phpstan/phpstan-phpunit": "^1",
-                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.6",
                 "phpunit/phpunit": "^9.6",
-                "symfony/cache": "^4.4 || ^5.4 || ^6.0 || ^7.0"
+                "symfony/cache": "^4.4 || ^5.4 || ^6.0 || ^7.0",
+                "symfony/finder": "^4.4 || ^5.4 || ^6.0 || ^7.0"
             },
             "type": "library",
             "autoload": {
@@ -1203,7 +1201,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/4.0.0"
+                "source": "https://github.com/doctrine/persistence/tree/4.1.0"
             },
             "funding": [
                 {
@@ -1219,7 +1217,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-01T21:49:07+00:00"
+            "time": "2025-08-21T16:00:31+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -1824,20 +1822,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/babel-bundle.git",
-                "reference": "e24507733f10cecc2747f1c8a31d02e6cc132d63"
+                "reference": "c98481d6f9329f0ad89bf617efb4c14d313590be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/babel-bundle/zipball/e24507733f10cecc2747f1c8a31d02e6cc132d63",
-                "reference": "e24507733f10cecc2747f1c8a31d02e6cc132d63",
+                "url": "https://api.github.com/repos/survos/babel-bundle/zipball/c98481d6f9329f0ad89bf617efb4c14d313590be",
+                "reference": "c98481d6f9329f0ad89bf617efb4c14d313590be",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-bundle": "^2.15",
                 "doctrine/orm": "^3.5",
+                "doctrine/persistence": "^4",
                 "ext-intl": "*",
                 "ext-mbstring": "*",
                 "php": "^8.4",
+                "symfony/console": "^7.3",
                 "symfony/dependency-injection": "^7.3",
                 "symfony/http-kernel": "^7.3",
                 "symfony/property-access": "^7.3",
@@ -1846,7 +1846,10 @@
             "require-dev": {
                 "nette/php-generator": "^4",
                 "nikic/php-parser": "^5",
-                "survos/libre-translate-bundle": "^1.6"
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^12.3",
+                "survos/libre-translate-bundle": "^1.6",
+                "survos/translator-bundle": "dev-main"
             },
             "default-branch": true,
             "type": "symfony-bundle",
@@ -1875,7 +1878,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-20T13:27:30+00:00"
+            "time": "2025-08-24T13:11:00+00:00"
         },
         {
             "name": "survos/translator-bundle",
@@ -1883,21 +1886,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/translation-bundle.git",
-                "reference": "c978fc753189eaa2138d44c00a97cea5555c76d1"
+                "reference": "78fa6a9ab8c3ebc53366f6a0cae4baf0d35d08cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/translation-bundle/zipball/c978fc753189eaa2138d44c00a97cea5555c76d1",
-                "reference": "c978fc753189eaa2138d44c00a97cea5555c76d1",
+                "url": "https://api.github.com/repos/survos/translation-bundle/zipball/78fa6a9ab8c3ebc53366f6a0cae4baf0d35d08cb",
+                "reference": "78fa6a9ab8c3ebc53366f6a0cae4baf0d35d08cb",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.4",
+                "psr/cache": "^3.0",
                 "psr/container": "^2.0",
+                "symfony/cache": "^7.3",
                 "symfony/config": "^7.3",
                 "symfony/console": "^7.3",
                 "symfony/dependency-injection": "^7.3",
                 "symfony/http-client": "^7.3",
+                "symfony/http-kernel": "^7.3",
                 "symfony/string": "^7.3"
             },
             "require-dev": {
@@ -1919,7 +1925,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "Engine-agnostic translation client bundle (Symfony 7.3 / PHP 8.4) with LibreTranslate adapter.",
+            "description": "Engine-agnostic translation client bundle (Symfony 7.3 / PHP 8.4) with LibreTranslate adapter and optional caching.",
             "support": {
                 "issues": "https://github.com/survos/translation-bundle/issues",
                 "source": "https://github.com/survos/translation-bundle/tree/main"
@@ -1930,7 +1936,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-24T09:59:49+00:00"
+            "time": "2025-08-24T11:21:51+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3236,16 +3242,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.8.1",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "423c36e369361003dc31ef11c5f15fb589e52c01"
+                "reference": "f356aa35f3cf3d2f46c31d344c1098eb2d260426"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/423c36e369361003dc31ef11c5f15fb589e52c01",
-                "reference": "423c36e369361003dc31ef11c5f15fb589e52c01",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/f356aa35f3cf3d2f46c31d344c1098eb2d260426",
+                "reference": "f356aa35f3cf3d2f46c31d344c1098eb2d260426",
                 "shasum": ""
             },
             "require": {
@@ -3284,7 +3290,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.8.1"
+                "source": "https://github.com/symfony/flex/tree/v2.8.2"
             },
             "funding": [
                 {
@@ -3296,11 +3302,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-05T07:45:19+00:00"
+            "time": "2025-08-22T07:17:23+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -7331,30 +7341,30 @@
         },
         {
             "name": "roave/better-reflection",
-            "version": "6.59.0",
+            "version": "6.60.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BetterReflection.git",
-                "reference": "e59267bf734297e1abfc4f7ddb3d35e4be95c0f6"
+                "reference": "53dd01710b5c705b1b570a1820bd65e70529ebc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/e59267bf734297e1abfc4f7ddb3d35e4be95c0f6",
-                "reference": "e59267bf734297e1abfc4f7ddb3d35e4be95c0f6",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/53dd01710b5c705b1b570a1820bd65e70529ebc7",
+                "reference": "53dd01710b5c705b1b570a1820bd65e70529ebc7",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "jetbrains/phpstorm-stubs": "2024.3",
-                "nikic/php-parser": "^5.4.0",
-                "php": "~8.2.0 || ~8.3.2 || ~8.4.1"
+                "nikic/php-parser": "^5.6.0",
+                "php": "~8.2.0 || ~8.3.2 || ~8.4.1 || ~8.5.0"
             },
             "conflict": {
                 "thecodingmachine/safe": "<1.1.3"
             },
             "require-dev": {
                 "phpbench/phpbench": "^1.4.1",
-                "phpunit/phpunit": "^11.5.21"
+                "phpunit/phpunit": "^11.5.28"
             },
             "suggest": {
                 "composer/composer": "Required to use the ComposerSourceLocator"
@@ -7394,9 +7404,9 @@
             "description": "Better Reflection - an improved code reflection API",
             "support": {
                 "issues": "https://github.com/Roave/BetterReflection/issues",
-                "source": "https://github.com/Roave/BetterReflection/tree/6.59.0"
+                "source": "https://github.com/Roave/BetterReflection/tree/6.60.0"
             },
-            "time": "2025-05-27T21:09:39+00:00"
+            "time": "2025-08-21T11:08:59+00:00"
         },
         {
             "name": "sebastian/cli-parser",

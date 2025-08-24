@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Entity\Translations\ArticleTranslationsTrait;
+use Survos\BabelBundle\Attribute\BabelStorage;
+use Survos\BabelBundle\Attribute\StorageMode;
 use Survos\BabelBundle\Entity\Traits\TranslatableHooksTrait;
 use Survos\BabelBundle\Contract\TranslatableResolvedInterface;
 use App\Repository\ArticleRepository;
@@ -15,9 +17,9 @@ use Survos\BabelBundle\Attribute\Translatable;
  * @property string|null $title [translatable via *TranslationsTrait]
  */
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
+#[BabelStorage(StorageMode::Property)]
 class Article implements TranslatableResolvedInterface
 {
-    use ArticleTranslationsTrait;
     use TranslatableHooksTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -25,18 +27,16 @@ class Article implements TranslatableResolvedInterface
     private ?int $id = null;
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
-    /* Translated field 'title' moved to *TranslationsTrait.
-       To revert: remove the trait and uncomment below.
-       #[ORM\Column(length: 255)]
+
     #[Translatable]
+    #[ORM\Column(length: 255)]
     public ?string $title = null;
-    */
     #[ORM\Column]
     private ?\DateTimeImmutable $publishedAt = null;
     #[ORM\Column(length: 255)]
     private ?string $author = null;
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $content = null;
+    public ?string $content = null;
     #[ORM\ManyToOne(inversedBy: 'articles')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Category $category = null;
@@ -65,11 +65,6 @@ class Article implements TranslatableResolvedInterface
     public function getTitle(): ?string
     {
         return $this->title;
-    }
-    public function setTitle(string $title): static
-    {
-        $this->title = $title;
-        return $this;
     }
     public function getPublishedAt(): ?\DateTimeImmutable
     {

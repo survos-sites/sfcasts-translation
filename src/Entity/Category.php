@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\Translations\CategoryTranslationsTrait;
+use Survos\BabelBundle\Attribute\BabelStorage;
 use Survos\BabelBundle\Entity\Traits\TranslatableHooksTrait;
 use Survos\BabelBundle\Contract\TranslatableResolvedInterface;
 use App\Repository\CategoryRepository;
@@ -14,6 +15,7 @@ use Survos\BabelBundle\Attribute\Translatable;
  * @property string|null $name [translatable via *TranslationsTrait]
  */
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
+#[BabelStorage()]
 class Category implements TranslatableResolvedInterface
 {
     use CategoryTranslationsTrait;
