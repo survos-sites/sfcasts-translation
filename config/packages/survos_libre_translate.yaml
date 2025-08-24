@@ -1,0 +1,13 @@
+## Default configuration for extension with alias: "survos_libre_translate"
+#survos_libre_translate:
+#    host:               'http://translation-server.survos.com'
+##    host:                 'http://127.0.0.1'
+#    port:                 '5000'
+#
+#    # the libretranslate API Key
+#    apikey:               null
+#    canManage:            true
+#
+#    # if translation is identical, try bing
+#    enableBing:           false
+#
