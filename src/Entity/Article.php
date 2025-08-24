@@ -20,17 +20,13 @@ use Survos\BabelBundle\Attribute\Translatable;
 #[BabelStorage(StorageMode::Property)]
 class Article implements TranslatableResolvedInterface
 {
-    use TranslatableHooksTrait;
+    use TranslatableHooksTrait, Translations\ArticleTranslationsTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
-
-    #[Translatable]
-    #[ORM\Column(length: 255)]
-    public ?string $title = null;
     #[ORM\Column]
     private ?\DateTimeImmutable $publishedAt = null;
     #[ORM\Column(length: 255)]
