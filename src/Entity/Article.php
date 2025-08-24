@@ -31,14 +31,15 @@ class Article implements TranslatableResolvedInterface
     private ?\DateTimeImmutable $publishedAt = null;
     #[ORM\Column(length: 255)]
     private ?string $author = null;
-    #[ORM\Column(type: Types::TEXT)]
-    public ?string $content = null;
     #[ORM\ManyToOne(inversedBy: 'articles')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Category $category = null;
     /**
      * @var Collection<int, Tag>
      */
+
+    #[ORM\Column(type: Types::TEXT, length: 255)]
+    public $content = null;
     #[ORM\ManyToMany(targetEntity: Tag::class, mappedBy: 'articles')]
     private Collection $tags;
     public function __construct()
@@ -78,15 +79,6 @@ class Article implements TranslatableResolvedInterface
     public function setAuthor(string $author): static
     {
         $this->author = $author;
-        return $this;
-    }
-    public function getContent(): ?string
-    {
-        return $this->content;
-    }
-    public function setContent(string $content): static
-    {
-        $this->content = $content;
         return $this;
     }
     public function getCategory(): ?Category

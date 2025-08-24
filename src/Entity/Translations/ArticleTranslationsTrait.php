@@ -18,5 +18,4 @@ trait ArticleTranslationsTrait
         get => $this->resolveTranslatable('title', $this->titleBacking, 'title');
         set => $this->titleBacking = $value;
     }
-
 }
