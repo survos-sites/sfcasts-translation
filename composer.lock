@@ -1822,12 +1822,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/survos/babel-bundle.git",
-                "reference": "c01ec64e614f00112a0f96eaa28f961278dee3aa"
+                "reference": "eab3e96b8860a608a29209ecc1a378fc98dce5fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/survos/babel-bundle/zipball/c01ec64e614f00112a0f96eaa28f961278dee3aa",
-                "reference": "c01ec64e614f00112a0f96eaa28f961278dee3aa",
+                "url": "https://api.github.com/repos/survos/babel-bundle/zipball/eab3e96b8860a608a29209ecc1a378fc98dce5fc",
+                "reference": "eab3e96b8860a608a29209ecc1a378fc98dce5fc",
                 "shasum": ""
             },
             "require": {
@@ -1878,7 +1878,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-24T16:04:33+00:00"
+            "time": "2025-08-25T01:52:06+00:00"
         },
         {
             "name": "survos/translator-bundle",
