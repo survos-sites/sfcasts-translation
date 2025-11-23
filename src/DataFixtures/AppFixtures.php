@@ -13,7 +13,6 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $space = TagFactory::createOne(['name' => 'space']);
-        return;
         $food = TagFactory::createOne(['name' => 'food']);
         $mercury = TagFactory::createOne(['name' => 'mercury']);
         $travel = TagFactory::createOne(['name' => 'travel']);

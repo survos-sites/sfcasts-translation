@@ -5,10 +5,11 @@ survos_translator:
       type: libre
       base_uri: 'https://babel.survos.com'
       api_key: null
-    libre_demo:
-      type: libre
-      base_uri: 'https://demo.libretranslate.com'
-      api_key: null
+      # requires an API keu
+#    libre_demo:
+#      type: libre
+#      base_uri: 'https://demo.libretranslate.com'
+#      api_key: null
     deepl:
         type: deepl
         plan: free # sets  base_uri: 'https://api.deepl.com'

@@ -13,13 +13,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Survos\BabelBundle\Attribute\BabelStorage;
 use Survos\BabelBundle\Attribute\StorageMode;
 use Survos\BabelBundle\Attribute\Translatable;
-use Survos\BabelBundle\Contract\TranslatableResolvedInterface;
-use Survos\BabelBundle\Entity\Traits\TranslatableHooksTrait;
+use Survos\BabelBundle\Contract\BabelHooksInterface;
+use Survos\BabelBundle\Entity\Traits\BabelHooksTrait;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 #[BabelStorage(StorageMode::Property)]
-class Article implements TranslatableResolvedInterface
+class Article implements BabelHooksInterface
 {
+    use BabelHooksTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -67,7 +68,6 @@ class Article implements TranslatableResolvedInterface
     #[ORM\ManyToMany(targetEntity: Tag::class, mappedBy: 'articles')]
     private Collection $tags;
 
-use TranslatableHooksTrait;
 
 public function __construct()
 {
